@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Яна | Про мене</title>
+  
+
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  color: white;
+  background: #0f0f1a;
+  overflow-x: hidden;
+}
+
+/* Анімований фон */
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top, #6a5acd, #0f0f1a);
+  animation: bgMove 10s infinite alternate;
+  z-index: -1;
+}
+
+@keyframes bgMove {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(40deg); }
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.title {
+  font-size: 3em;
+  animation: fadeInDown 1.2s ease;
+}
+
+.subtitle {
+  margin-top: 10px;
+  opacity: 0.8;
+  animation: fadeIn 2s ease;
+}
+
+/* КАРТКИ */
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px;
+}
+
+.card {
+  background: rgba(255,255,255,0.08);
+  padding: 20px;
+  width: 250px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  transition: 0.4s;
+  animation: fadeUp 1s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: rgba(255,255,255,0.15);
+}
+
+/* ABOUT */
+.about {
+  text-align: center;
+  padding: 40px;
+  animation: fadeIn 2s ease;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.6;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body>
+
+<div class="background"></div>
+
+<header class="hero">
+  <h1 class="title">Привіт, я Яна ✨</h1>
+  <p class="subtitle">Мені 14 років • Волейбол • Гітара • Співи</p>
+</header>
+
+<section class="cards">
+
+  <div class="card">
+    <h2>🏐 Волейбол</h2>
+    <p>Я займаюсь волейболом і люблю командну гру та адреналін матчів.</p>
+  </div>
+
+  <div class="card">
+    <h2>🎸 Гітара</h2>
+    <p>Вчуся грати на гітарі та створювати власні мелодії.</p>
+  </div>
+
+  <div class="card">
+    <h2>🎤 Співи</h2>
+    <p>Спів — це мій спосіб виражати емоції та настрій.</p>
+  </div>
+
+</section>
+
+<section class="about">
+  <h2>Про мене</h2>
+  <p>
+    Я активна, творча і люблю розвиватися в різних напрямках.
+    Музика та спорт — це те, що мене надихає щодня.
+  </p>
+</section>
+
+<footer>
+  <p>© 2026 Яна</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
